@@ -35,3 +35,6 @@ mkdir -p ~/.vim/pack/vendor/start
 git clone --depth 1 https://github.com/preservim/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
 cp .vimrc ~/.vimrc
 cp .zshrc ~/.zshrc
+
+source ~/.zshrc
+source ~/.vimrc
