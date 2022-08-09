@@ -1,3 +1,9 @@
+########################## General shell config ##########################
+export EDITOR="vim"
+
+# Enable deleteing things left of the cursor
+bindkey "^X\\x7f" backward-kill-line
+
 ############################### zsh config ###############################
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -27,25 +33,17 @@ plugins=(git npm history-substring-search)
 bindkey '\e[A' history-beginning-search-backward
 bindkey '\e[B' history-beginning-search-forward
 
-########################## General shell config ##########################
-export EDITOR="vim"
-
-source ~/.profile
-
-# Enable deleteing things left of the cursor
-bindkey "^X\\x7f" backward-kill-line
-
 
 ################################ Aliases #################################
 
-function g {/workspaces/github/$1; }
-compctl -/ -W /workspaces/github/ g
+function gw { /workspaces/github/$1; }
+compctl -/ -W /workspaces/github/ gw
 
-function e {/workspaces/education-web/$1; }
-compctl -/ -W /workspaces/education-web/ e
+function ew { /workspaces/education-web/$1; }
+compctl -/ -W /workspaces/education-web/ ew
 
-function e {/workspaces/classroom/$1; }
-compctl -/ -W /workspaces/classroom/ c
+function cw { /workspaces/classroom/$1 }
+compctl -/ -W /workspaces/classroom/ cw
 
 function lsport {
   if [ -z $1 ]
