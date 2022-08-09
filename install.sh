@@ -34,3 +34,4 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 mkdir -p ~/.vim/pack/vendor/start
 git clone --depth 1 https://github.com/preservim/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
 cp .vimrc ~/.vimrc
+cp .zshrc ~/.zshrc
