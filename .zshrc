@@ -38,16 +38,16 @@ bindkey "^X\\x7f" backward-kill-line
 
 ################################ Aliases #################################
 
-g() {/workspaces/github/$1; }
+function g {/workspaces/github/$1; }
 compctl -/ -W /workspaces/github/ g
 
-e() {/workspaces/education-web/$1; }
+function e {/workspaces/education-web/$1; }
 compctl -/ -W /workspaces/education-web/ e
 
-e() {/workspaces/classroom/$1; }
+function e {/workspaces/classroom/$1; }
 compctl -/ -W /workspaces/classroom/ c
 
-lsport() {
+function lsport {
   if [ -z $1 ]
   then
     lsof -nP -iTCP | grep LISTEN
