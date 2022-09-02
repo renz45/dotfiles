@@ -1,0 +1,39 @@
+yellow="\e[33;1m"
+red="\e[31;5m"
+green="\e[32;1m"
+white="\e[37;1m"
+light_blue="\e[36;1m"
+
+reset_color="\e[0m"
+break="\r\n"
+
+get_color_code () {
+  code=$1
+  eval "echo "\$$(echo $code)""
+}
+
+color () {
+  str=$1
+  hue=$2
+  echo "$(get_color_code $hue)$str$reset_color"
+}
+
+message () {
+  printf "$1$break"
+}
+
+green_message () {
+  message "$(color "$1" 'green')"
+}
+
+red_message () {
+  message "$(color "$1" 'red')"
+}
+
+yellow_message () {
+  message "$(color "$1" 'yellow')"
+}
+
+line_break () {
+  printf "$break"
+}
